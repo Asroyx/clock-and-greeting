@@ -7,8 +7,7 @@ greeting.innerHTML = userInputName;
 function showTime() {
   const clockElement = document.getElementById("myClock");
 
-  // Use a timer to update the time every second
-  setInterval(function () {
+  function updateClock() {
     const date = new Date();
 
     const hours = date.getHours();
@@ -21,7 +20,13 @@ function showTime() {
     // Combine the time and day and place it into the HTML
     const time = `${hours}:${minutes}:${seconds}`;
     clockElement.innerHTML = time + " " + day;
-  }, 1000); // Update every second
+
+    // Call requestAnimationFrame to update the clock on the next frame
+    requestAnimationFrame(updateClock);
+  }
+
+  // Initial call to updateClock to start the clock
+  updateClock();
 }
 
 // Call the function to display the time when the page is loaded
