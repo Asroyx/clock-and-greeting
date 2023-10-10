@@ -1,6 +1,8 @@
 # Clock and Greeting App
 
-![Clock Preview](clock.gif)
+<p align="center">
+  <img src="clock.gif" alt="Clock Preview">
+</p>
 
 This repository contains a simple JavaScript clock and greeting application. The application prompts the user for their name and then displays a greeting message with the user's name and the current time and date.
 
